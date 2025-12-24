@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wonderland 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(180deg, #0a1628 0%, #1a2940 50%, #2d1b3d 100%);
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 1em;
+            pointer-events: none;
+            z-index: 1000;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.2) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 6rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite, float 3s ease-in-out infinite;
+            text-shadow: 0 0 60px rgba(255, 107, 107, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            color: #ffd93d;
+            margin-bottom: 2rem;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 217, 61, 0.5); }
+            50% { text-shadow: 0 0 40px rgba(255, 217, 61, 0.8); }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.6);
+        }
+
+        .features {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .feature-card:hover::before {
+            top: -100%;
+            left: -100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.3);
+            border-color: rgba(255, 107, 107, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .feature-card:hover .feature-icon {
+            animation: spin 0.6s ease;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffd93d;
+        }
+
+        .feature-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e5e5e5;
+        }
+
+        .countdown {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(107, 207, 127, 0.2) 100%);
+            text-align: center;
+        }
+
+        .countdown h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #ffd93d;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .time-unit {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            min-width: 120px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .time-value {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .time-label {
+            font-size: 1rem;
+            color: #e5e5e5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+        }
+
+        .tree-container {
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .tree {
+            font-size: 2rem;
+            line-height: 1;
+            display: inline-block;
+            animation: treeGrow 2s ease-out;
+        }
+
+        @keyframes treeGrow {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .ornament {
+            display: inline-block;
+            animation: swing 3s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            color: #e5e5e5;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            animation: sparkleAnim 1s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes sparkleAnim {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) rotate(180deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .time-value {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>🎄 Merry Christmas 2025 🎄</h1>
+            <p class="subtitle"><i class="fa-solid fa-star"></i>Experience the Magic of the Season <i class="fa-solid fa-star"></i></p>
+             <p class="subtitle">HEMANUEL's Santa Web World</p>
+            <a href="#features" class="cta-button">Discover the Wonder</a>
+
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🎅</span>
+                <h3>Santa's Workshop</h3>
+                <p>Watch as elves prepare gifts around the clock, bringing joy to children worldwide. The magic never stops in the North Pole!</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎁</span>
+                <h3>Perfect Gifts</h3>
+                <p>Discover thoughtfully curated gift ideas for everyone on your list. Make this Christmas unforgettable with presents from the heart.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">❄️</span>
+                <h3>Winter Magic</h3>
+                <p>Experience the enchantment of snow-covered landscapes and cozy fireside moments. Let the season warm your soul.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <h2>🎅 Countdown to Christmas 2025 🎅</h2>
+        <div class="timer" id="timer">
+            <div class="time-unit">
+                <span class="time-value" id="days">00</span>
+                <span class="time-label">Days</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="hours">00</span>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="minutes">00</span>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="seconds">00</span>
+                <span class="time-label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="tree-container">
+        <div class="tree">
+            <div>⭐</div>
+            <div><span class="ornament">🔴</span>▲<span class="ornament">🔵</span></div>
+            <div><span class="ornament">🟡</span>▲▲<span class="ornament">🟢</span></div>
+            <div><span class="ornament">🔴</span>▲▲▲<span class="ornament">🔵</span></div>
+            <div><span class="ornament">🟡</span>▲▲▲▲<span class="ornament">🟢</span></div>
+            <div><span class="ornament">🔴</span>▲▲▲▲▲<span class="ornament">🔵</span></div>
+            <div>▐█▌</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>🎄 Wishing you peace, joy, and love this Christmas season 🎄</p>
+        <p style="margin-top: 1rem; font-size: 1rem; opacity: 0.8;">© 2025 Hemanuel Christmas Wonderland. Sparkage shots!  </p>
+    </footer>
+
+    <script>
+        // Snowflakes
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 5 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        setInterval(createSnowflake, 200);
+
+        // Countdown Timer
+        function updateCountdown() {
+            const christmas = new Date('December 25, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = christmas - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Interactive sparkles on click
+        document.addEventListener('click', (e) => {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.textContent = '✨';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.fontSize = Math.random() * 20 + 20 + 'px';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        });
+
+        // Smooth scroll
+        document.querySelector('.cta-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('#features').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/d149d0ad02.js" crossorigin="anonymous"></script>
+</body>
+</html>
